@@ -1,0 +1,134 @@
+/* Reset default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #FF4081;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Side menu styles */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #FF80AB;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+    z-index: 1;
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #FF4081;
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+main .content h2 {
+    text-align: center;
+    color: #FF4081;
+}
+
+main .content blockquote {
+    font-style: italic;
+    color: #333;
+}
+
+/* Form styles */
+main .content form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+main .content form label {
+    margin-bottom: 5px;
+    color: #FF4081;
+}
+
+main .content form input,
+main .content form select,
+main .content form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #FF4081;
+    border-radius: 5px;
+    width: 100%;
+}
+
+main .content form input[type="submit"] {
+    background-color: #FF4081;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+main .content form input[type="submit"]:hover {
+    background-color: #FF80AB;
+}
+
+/* Footer styles */
+footer {
+    background-color: #FF4081;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

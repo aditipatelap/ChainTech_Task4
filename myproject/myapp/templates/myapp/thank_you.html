@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Your details have been submitted:</h2>
+            <p><strong>First Name:</strong> {{ submitted_data.first_name }}</p>
+            <p><strong>Last Name:</strong> {{ submitted_data.last_name }}</p>
+            <p><strong>Contact Number:</strong> {{ submitted_data.contact_number }}</p>
+            <p><strong>Email:</strong> {{ submitted_data.email }}</p>
+            <p><strong>Gender:</strong> {{ submitted_data.gender }}</p>
+            <p><strong>Education:</strong> {{ submitted_data.education }}</p>
+            <p><strong>State:</strong> {{ submitted_data.state }}</p>
+        </section>
+    </main>
+    <footer>
+        <p>Contact me at: <a href="mailto:ampaditipatel@gmail.com">ampaditipatel@gmail.com</a></p>
+    </footer>
+</body>
+</html>

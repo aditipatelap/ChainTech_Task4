@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling Example</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My App</h1>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+    </header>
+    <nav id="side-menu" class="side-menu">
+        <a href="#" class="close-btn">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <section class="content">
+            <h2>Submit Your Details</h2>
+            <form method="POST" action="{% url 'submit_form' %}" style="border: 2px solid #FF4081; border-radius: 20px ; padding: 20px;">
+                {% csrf_token %}
+                <label for="first_name">First Name:
+                    <input type="text" id="first_name" name="first_name" required>
+                </label><br><br>
+                
+                <label for="last_name">Last Name:
+                    <input type="text" id="last_name" name="last_name" required>
+                </label><br><br>
+                
+                <label for="contact_number">Contact Number:
+                    <input type="text" id="contact_number" name="contact_number" required>
+                </label><br><br>
+                
+                <label for="email">Email:
+                    <input type="email" id="email" name="email" required>
+                </label><br><br>
+                
+                <label for="gender">Gender:
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label><br><br>
+                
+                <label for="education">Education:
+                    <input type="text" id="education" name="education" required>
+                </label><br><br>
+                
+                <label for="state">State:
+                    <input type="text" id="state" name="state" required>
+                </label><br><br>
+                
+                <input type="submit" value="Submit" style="border: 3px solid #FF4081; border-radius: 3px; padding: 8px; font-size: large; background-color: #FF4081; ">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Contact me at: <a href="mailto:ampaditipatel@gmail.com">ampaditipatel@gmail.com</a></p>
+    </footer>
+    <script src="{% static 'myapp/js/script.js' %}"></script>
+</body>
+</html>
